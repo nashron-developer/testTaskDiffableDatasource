@@ -9,9 +9,9 @@ import Foundation
 
 struct Channel: Codable {
     let id: Int
-    let order: Int
-    let access: Int
-    let callSign: String
+    let orderNum: Int
+    let accessNum: Int
+    let CallSign: String
 }
 
 
