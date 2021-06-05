@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		88414C50266BA89E00AE8DF4 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88414C4F266BA89E00AE8DF4 /* ResponseError.swift */; };
+		88414C52266BA8F700AE8DF4 /* ProgramsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88414C51266BA8F700AE8DF4 /* ProgramsRepository.swift */; };
+		88414C54266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88414C53266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift */; };
 		885FBBEE266809A70040CE40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBED266809A70040CE40 /* AppDelegate.swift */; };
 		885FBBF0266809A70040CE40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBEF266809A70040CE40 /* SceneDelegate.swift */; };
 		885FBBF2266809A70040CE40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBF1266809A70040CE40 /* ViewController.swift */; };
@@ -15,7 +17,7 @@
 		885FBBF7266809A80040CE40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885FBBF6266809A80040CE40 /* Assets.xcassets */; };
 		885FBBFA266809A80040CE40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885FBBF8266809A80040CE40 /* LaunchScreen.storyboard */; };
 		885FBC0326680A3F0040CE40 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC0226680A3F0040CE40 /* Channel.swift */; };
-		885FBC0526680B730040CE40 /* Programm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC0426680B730040CE40 /* Programm.swift */; };
+		885FBC0526680B730040CE40 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC0426680B730040CE40 /* Program.swift */; };
 		885FBC0726680C1E0040CE40 /* RecentAirTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC0626680C1E0040CE40 /* RecentAirTime.swift */; };
 		885FBC0A26680D060040CE40 /* ChannelsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC0926680D060040CE40 /* ChannelsRepository.swift */; };
 		885FBC0D26680F130040CE40 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC0C26680F130040CE40 /* ApiConfig.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		88414C4F266BA89E00AE8DF4 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		88414C51266BA8F700AE8DF4 /* ProgramsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsRepository.swift; sourceTree = "<group>"; };
+		88414C53266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrmsRepositoryTests.swift; sourceTree = "<group>"; };
 		885FBBEA266809A70040CE40 /* TestTaskDiffableDatasource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskDiffableDatasource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885FBBED266809A70040CE40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		885FBBEF266809A70040CE40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +47,7 @@
 		885FBBF9266809A80040CE40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		885FBBFB266809A80040CE40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		885FBC0226680A3F0040CE40 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		885FBC0426680B730040CE40 /* Programm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Programm.swift; sourceTree = "<group>"; };
+		885FBC0426680B730040CE40 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		885FBC0626680C1E0040CE40 /* RecentAirTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentAirTime.swift; sourceTree = "<group>"; };
 		885FBC0926680D060040CE40 /* ChannelsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsRepository.swift; sourceTree = "<group>"; };
 		885FBC0C26680F130040CE40 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
@@ -109,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				885FBC0226680A3F0040CE40 /* Channel.swift */,
-				885FBC0426680B730040CE40 /* Programm.swift */,
+				885FBC0426680B730040CE40 /* Program.swift */,
 				885FBC0626680C1E0040CE40 /* RecentAirTime.swift */,
 				88414C4F266BA89E00AE8DF4 /* ResponseError.swift */,
 			);
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				885FBC0926680D060040CE40 /* ChannelsRepository.swift */,
+				88414C51266BA8F700AE8DF4 /* ProgramsRepository.swift */,
 			);
 			path = Gateway;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			children = (
 				885FBC16266813F70040CE40 /* Info.plist */,
 				885FBC1D266814330040CE40 /* ChannelsRepositoryTests.swift */,
+				88414C53266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift */,
 			);
 			path = TestTaskDiffableDatasourceTests;
 			sourceTree = "<group>";
@@ -248,7 +254,8 @@
 				88414C50266BA89E00AE8DF4 /* ResponseError.swift in Sources */,
 				885FBC0326680A3F0040CE40 /* Channel.swift in Sources */,
 				885FBBEE266809A70040CE40 /* AppDelegate.swift in Sources */,
-				885FBC0526680B730040CE40 /* Programm.swift in Sources */,
+				88414C52266BA8F700AE8DF4 /* ProgramsRepository.swift in Sources */,
+				885FBC0526680B730040CE40 /* Program.swift in Sources */,
 				885FBC0726680C1E0040CE40 /* RecentAirTime.swift in Sources */,
 				885FBBF0266809A70040CE40 /* SceneDelegate.swift in Sources */,
 			);
@@ -259,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885FBC1E266814330040CE40 /* ChannelsRepositoryTests.swift in Sources */,
+				88414C54266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
