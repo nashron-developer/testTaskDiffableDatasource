@@ -43,6 +43,4 @@ final class ChannelsRepositoryImpl: ChannelsRepository {
     
 }
 
-enum ResponseError: Error {
-    case dataIsNull
-}
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88414C50266BA89E00AE8DF4 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88414C4F266BA89E00AE8DF4 /* ResponseError.swift */; };
 		885FBBEE266809A70040CE40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBED266809A70040CE40 /* AppDelegate.swift */; };
 		885FBBF0266809A70040CE40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBEF266809A70040CE40 /* SceneDelegate.swift */; };
 		885FBBF2266809A70040CE40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBF1266809A70040CE40 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88414C4F266BA89E00AE8DF4 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		885FBBEA266809A70040CE40 /* TestTaskDiffableDatasource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskDiffableDatasource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885FBBED266809A70040CE40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		885FBBEF266809A70040CE40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				885FBC0226680A3F0040CE40 /* Channel.swift */,
 				885FBC0426680B730040CE40 /* Programm.swift */,
 				885FBC0626680C1E0040CE40 /* RecentAirTime.swift */,
+				88414C4F266BA89E00AE8DF4 /* ResponseError.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				885FBC0A26680D060040CE40 /* ChannelsRepository.swift in Sources */,
 				885FBBF2266809A70040CE40 /* ViewController.swift in Sources */,
 				885FBC0D26680F130040CE40 /* ApiConfig.swift in Sources */,
+				88414C50266BA89E00AE8DF4 /* ResponseError.swift in Sources */,
 				885FBC0326680A3F0040CE40 /* Channel.swift in Sources */,
 				885FBBEE266809A70040CE40 /* AppDelegate.swift in Sources */,
 				885FBC0526680B730040CE40 /* Programm.swift in Sources */,
