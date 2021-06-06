@@ -12,7 +12,6 @@
 		88414C54266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88414C53266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift */; };
 		885FBBEE266809A70040CE40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBED266809A70040CE40 /* AppDelegate.swift */; };
 		885FBBF0266809A70040CE40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBEF266809A70040CE40 /* SceneDelegate.swift */; };
-		885FBBF2266809A70040CE40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBBF1266809A70040CE40 /* ViewController.swift */; };
 		885FBBF5266809A70040CE40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885FBBF3266809A70040CE40 /* Main.storyboard */; };
 		885FBBF7266809A80040CE40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885FBBF6266809A80040CE40 /* Assets.xcassets */; };
 		885FBBFA266809A80040CE40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885FBBF8266809A80040CE40 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,8 @@
 		88C85AEF266CE0DC002C7EC3 /* AirTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AEE266CE0DC002C7EC3 /* AirTimePresenter.swift */; };
 		88C85AF1266CE0F0002C7EC3 /* AirTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AF0266CE0F0002C7EC3 /* AirTimeRouter.swift */; };
 		88C85AF3266CE105002C7EC3 /* AirTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AF2266CE105002C7EC3 /* AirTimeViewController.swift */; };
+		88C85AF5266CE314002C7EC3 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AF4266CE314002C7EC3 /* Module.swift */; };
+		88C85AF7266CE37E002C7EC3 /* AirTimeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AF6266CE37E002C7EC3 /* AirTimeModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		885FBBEA266809A70040CE40 /* TestTaskDiffableDatasource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskDiffableDatasource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885FBBED266809A70040CE40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		885FBBEF266809A70040CE40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		885FBBF1266809A70040CE40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		885FBBF4266809A70040CE40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		885FBBF6266809A80040CE40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		885FBBF9266809A80040CE40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		88C85AEE266CE0DC002C7EC3 /* AirTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTimePresenter.swift; sourceTree = "<group>"; };
 		88C85AF0266CE0F0002C7EC3 /* AirTimeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTimeRouter.swift; sourceTree = "<group>"; };
 		88C85AF2266CE105002C7EC3 /* AirTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTimeViewController.swift; sourceTree = "<group>"; };
+		88C85AF4266CE314002C7EC3 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		88C85AF6266CE37E002C7EC3 /* AirTimeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTimeModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,16 +105,16 @@
 		885FBBEC266809A70040CE40 /* TestTaskDiffableDatasource */ = {
 			isa = PBXGroup;
 			children = (
+				885FBC0826680CE90040CE40 /* Gateway */,
 				88C85AEB266CE07F002C7EC3 /* ProgramsAirTimeModule */,
 				885FBC0B26680F010040CE40 /* Configuration */,
-				885FBC0826680CE90040CE40 /* Gateway */,
 				885FBBED266809A70040CE40 /* AppDelegate.swift */,
 				885FBBEF266809A70040CE40 /* SceneDelegate.swift */,
-				885FBBF1266809A70040CE40 /* ViewController.swift */,
 				885FBBF3266809A70040CE40 /* Main.storyboard */,
 				885FBBF6266809A80040CE40 /* Assets.xcassets */,
 				885FBBF8266809A80040CE40 /* LaunchScreen.storyboard */,
 				885FBBFB266809A80040CE40 /* Info.plist */,
+				88C85AF4266CE314002C7EC3 /* Module.swift */,
 			);
 			path = TestTaskDiffableDatasource;
 			sourceTree = "<group>";
@@ -163,6 +165,7 @@
 				88C85AEC266CE0D1002C7EC3 /* AirTimeInteractor.swift */,
 				88C85AF0266CE0F0002C7EC3 /* AirTimeRouter.swift */,
 				885FBC0126680A1A0040CE40 /* Entities */,
+				88C85AF6266CE37E002C7EC3 /* AirTimeModule.swift */,
 			);
 			path = ProgramsAirTimeModule;
 			sourceTree = "<group>";
@@ -270,7 +273,6 @@
 			files = (
 				88C85AEF266CE0DC002C7EC3 /* AirTimePresenter.swift in Sources */,
 				885FBC0A26680D060040CE40 /* ChannelsRepository.swift in Sources */,
-				885FBBF2266809A70040CE40 /* ViewController.swift in Sources */,
 				885FBC0D26680F130040CE40 /* ApiConfig.swift in Sources */,
 				88C85AF1266CE0F0002C7EC3 /* AirTimeRouter.swift in Sources */,
 				88414C50266BA89E00AE8DF4 /* ResponseError.swift in Sources */,
@@ -280,6 +282,8 @@
 				885FBBEE266809A70040CE40 /* AppDelegate.swift in Sources */,
 				88414C52266BA8F700AE8DF4 /* ProgramsRepository.swift in Sources */,
 				885FBC0526680B730040CE40 /* Program.swift in Sources */,
+				88C85AF7266CE37E002C7EC3 /* AirTimeModule.swift in Sources */,
+				88C85AF5266CE314002C7EC3 /* Module.swift in Sources */,
 				885FBC0726680C1E0040CE40 /* RecentAirTime.swift in Sources */,
 				885FBBF0266809A70040CE40 /* SceneDelegate.swift in Sources */,
 			);
