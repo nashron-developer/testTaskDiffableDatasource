@@ -22,6 +22,10 @@
 		885FBC0A26680D060040CE40 /* ChannelsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC0926680D060040CE40 /* ChannelsRepository.swift */; };
 		885FBC0D26680F130040CE40 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC0C26680F130040CE40 /* ApiConfig.swift */; };
 		885FBC1E266814330040CE40 /* ChannelsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885FBC1D266814330040CE40 /* ChannelsRepositoryTests.swift */; };
+		88C85AED266CE0D1002C7EC3 /* AirTimeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AEC266CE0D1002C7EC3 /* AirTimeInteractor.swift */; };
+		88C85AEF266CE0DC002C7EC3 /* AirTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AEE266CE0DC002C7EC3 /* AirTimePresenter.swift */; };
+		88C85AF1266CE0F0002C7EC3 /* AirTimeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AF0266CE0F0002C7EC3 /* AirTimeRouter.swift */; };
+		88C85AF3266CE105002C7EC3 /* AirTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C85AF2266CE105002C7EC3 /* AirTimeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		885FBC12266813F70040CE40 /* TestTaskDiffableDatasourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTaskDiffableDatasourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		885FBC16266813F70040CE40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		885FBC1D266814330040CE40 /* ChannelsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsRepositoryTests.swift; sourceTree = "<group>"; };
+		88C85AEC266CE0D1002C7EC3 /* AirTimeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTimeInteractor.swift; sourceTree = "<group>"; };
+		88C85AEE266CE0DC002C7EC3 /* AirTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTimePresenter.swift; sourceTree = "<group>"; };
+		88C85AF0266CE0F0002C7EC3 /* AirTimeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTimeRouter.swift; sourceTree = "<group>"; };
+		88C85AF2266CE105002C7EC3 /* AirTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTimeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +103,9 @@
 		885FBBEC266809A70040CE40 /* TestTaskDiffableDatasource */ = {
 			isa = PBXGroup;
 			children = (
+				88C85AEB266CE07F002C7EC3 /* ProgramsAirTimeModule */,
 				885FBC0B26680F010040CE40 /* Configuration */,
 				885FBC0826680CE90040CE40 /* Gateway */,
-				885FBC0126680A1A0040CE40 /* Entities */,
 				885FBBED266809A70040CE40 /* AppDelegate.swift */,
 				885FBBEF266809A70040CE40 /* SceneDelegate.swift */,
 				885FBBF1266809A70040CE40 /* ViewController.swift */,
@@ -145,6 +153,18 @@
 				88414C53266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift */,
 			);
 			path = TestTaskDiffableDatasourceTests;
+			sourceTree = "<group>";
+		};
+		88C85AEB266CE07F002C7EC3 /* ProgramsAirTimeModule */ = {
+			isa = PBXGroup;
+			children = (
+				88C85AF2266CE105002C7EC3 /* AirTimeViewController.swift */,
+				88C85AEE266CE0DC002C7EC3 /* AirTimePresenter.swift */,
+				88C85AEC266CE0D1002C7EC3 /* AirTimeInteractor.swift */,
+				88C85AF0266CE0F0002C7EC3 /* AirTimeRouter.swift */,
+				885FBC0126680A1A0040CE40 /* Entities */,
+			);
+			path = ProgramsAirTimeModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,11 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C85AEF266CE0DC002C7EC3 /* AirTimePresenter.swift in Sources */,
 				885FBC0A26680D060040CE40 /* ChannelsRepository.swift in Sources */,
 				885FBBF2266809A70040CE40 /* ViewController.swift in Sources */,
 				885FBC0D26680F130040CE40 /* ApiConfig.swift in Sources */,
+				88C85AF1266CE0F0002C7EC3 /* AirTimeRouter.swift in Sources */,
 				88414C50266BA89E00AE8DF4 /* ResponseError.swift in Sources */,
 				885FBC0326680A3F0040CE40 /* Channel.swift in Sources */,
+				88C85AED266CE0D1002C7EC3 /* AirTimeInteractor.swift in Sources */,
+				88C85AF3266CE105002C7EC3 /* AirTimeViewController.swift in Sources */,
 				885FBBEE266809A70040CE40 /* AppDelegate.swift in Sources */,
 				88414C52266BA8F700AE8DF4 /* ProgramsRepository.swift in Sources */,
 				885FBC0526680B730040CE40 /* Program.swift in Sources */,
