@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct Program: Codable {
+struct Program: Hashable, Codable {
     let recentAirTime: RecentAirTime
     let name: String
-    let shortName: String
     let startTime: String
     let length: Int
     

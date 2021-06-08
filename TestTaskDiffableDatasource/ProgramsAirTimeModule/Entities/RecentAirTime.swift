@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RecentAirTime: Codable {
+struct RecentAirTime: Hashable, Codable {
     let id: Int
-    let channelId: Int
+    let channelID: Int
 }
