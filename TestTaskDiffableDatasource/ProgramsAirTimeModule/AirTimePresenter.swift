@@ -9,10 +9,14 @@ import UIKit
 
 protocol AirTimeView: AnyObject {
     var presenter: AirTimePresenter { get }
+    
+    func showAlert(with title: String, _ message: String?)
 }
 
 protocol AirTimePresenter {
     var view: AirTimeView? { get }
+    
+    func getPrograms(completionHandler: @escaping ([Program]) -> Void)
 }
 
 final class AirTimePresenterImpl: AirTimePresenter {
@@ -24,6 +28,19 @@ final class AirTimePresenterImpl: AirTimePresenter {
     init(interactor: AirTimeInteractor, router: AirTimeRouter) {
         self.interactor = interactor
         self.router = router
+    }
+    
+    func getPrograms(completionHandler: @escaping ([Program]) -> Void) {
+        interactor.getPrograms { [weak view] (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let programs):
+                    completionHandler(programs)
+                case .failure(let error):
+                    view?.showAlert(with: "Error", error.localizedDescription)
+                }
+            }
+        }
     }
     
 }
