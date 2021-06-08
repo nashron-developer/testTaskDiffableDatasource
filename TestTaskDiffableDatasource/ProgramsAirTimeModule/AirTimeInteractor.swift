@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AirTimeInteractor {
-    func getPrograms(completionHandler: @escaping (Result<[Program], Error>) -> Void)
+    func getRecentAirTime(completionHandler: @escaping (Result<[Channel:[Program]], Error>) -> Void)
 }
 
 final class AirTimeInteractorImpl: AirTimeInteractor {
@@ -16,7 +16,7 @@ final class AirTimeInteractorImpl: AirTimeInteractor {
     private let programsRepository: ProgramsRepository
     private let channelsRepository: ChannelsRepository
     
-    private var programs: [Program]?
+    private var resentAirTime: [Channel: [Program]]?
     private var programsLastRequestTime: Date?
     
     init(programsRepository: ProgramsRepository, channelsRepository: ChannelsRepository) {
@@ -24,14 +24,48 @@ final class AirTimeInteractorImpl: AirTimeInteractor {
         self.programsRepository = programsRepository
     }
     
-    func getPrograms(completionHandler: @escaping (Result<[Program], Error>) -> Void) {
-        if let programs = self.programs,
+    func getRecentAirTime(completionHandler: @escaping (Result<[Channel : [Program]], Error>) -> Void) {
+        if let resentAirTime = self.resentAirTime,
            let lastRequestTime = self.programsLastRequestTime,
            lastRequestTime.distance(to: Date()) < 300 {
-            completionHandler(.success(programs))
+            completionHandler(.success(resentAirTime))
             return
         }
-        programsRepository.getPrograms(completionHandler: completionHandler)
+        var programs = [Program]()
+        var channels = [Channel]()
+        let group = DispatchGroup()
+        group.enter()
+        programsRepository.getPrograms { result in
+            defer {
+                group.leave()
+            }
+            switch result {
+            case .success(let responsePrograms): programs = responsePrograms
+            case .failure(let error): completionHandler(.failure(error))
+            }
+        }
+        group.enter()
+        channelsRepository.getChannels { result in
+            defer {
+                group.leave()
+            }
+            switch result {
+            case .success(let responseChannels): channels = responseChannels
+            case .failure(let error): completionHandler(.failure(error))
+            }
+        }
+        group.notify(queue: .global(qos: .userInitiated)) { [unowned self] in
+            if self.resentAirTime == nil {
+                self.resentAirTime = [Channel:[Program]]()
+            }
+            channels.forEach { channel in
+                let programsByChannel = programs.filter { $0.recentAirTime.channelID == channel.id }
+                #warning("need add sorting by program start time")
+                programs.removeAll(where: { programsByChannel.contains($0) })
+                self.resentAirTime![channel] = programsByChannel
+            }
+            completionHandler(.success(self.resentAirTime!))
+        }
     }
-    
+
 }
