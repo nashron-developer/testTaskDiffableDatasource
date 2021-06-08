@@ -16,7 +16,7 @@ final class ProgramsRepositoryImpl: ProgramsRepository {
     private let requestUrl: URL
     
     init(baseUrl: URL) {
-        guard let requestUrl = URL(string: "json/Programs", relativeTo: baseUrl) else {
+        guard let requestUrl = URL(string: "json/ProgramItems", relativeTo: baseUrl) else {
             fatalError("Error to make url with baseUrl \(baseUrl.absoluteString) and path json/ProgramItems")
         }
         self.requestUrl = requestUrl
