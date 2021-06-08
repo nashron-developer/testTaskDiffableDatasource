@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883982D8266F9CEC00E6B7BC /* SectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883982D7266F9CEC00E6B7BC /* SectionHeaderReusableView.swift */; };
+		883982DA266FAD6400E6B7BC /* GridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883982D9266FAD6400E6B7BC /* GridCollectionViewLayout.swift */; };
+		883982DC266FAD9F00E6B7BC /* CollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883982DB266FAD9F00E6B7BC /* CollectionViewSection.swift */; };
 		88414C50266BA89E00AE8DF4 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88414C4F266BA89E00AE8DF4 /* ResponseError.swift */; };
 		88414C52266BA8F700AE8DF4 /* ProgramsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88414C51266BA8F700AE8DF4 /* ProgramsRepository.swift */; };
 		88414C54266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88414C53266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		883982D7266F9CEC00E6B7BC /* SectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderReusableView.swift; sourceTree = "<group>"; };
+		883982D9266FAD6400E6B7BC /* GridCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewLayout.swift; sourceTree = "<group>"; };
+		883982DB266FAD9F00E6B7BC /* CollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSection.swift; sourceTree = "<group>"; };
 		88414C4F266BA89E00AE8DF4 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		88414C51266BA8F700AE8DF4 /* ProgramsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsRepository.swift; sourceTree = "<group>"; };
 		88414C53266BA9CF00AE8DF4 /* ProgrmsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrmsRepositoryTests.swift; sourceTree = "<group>"; };
@@ -161,11 +167,14 @@
 			isa = PBXGroup;
 			children = (
 				88C85AF2266CE105002C7EC3 /* AirTimeViewController.swift */,
+				883982DB266FAD9F00E6B7BC /* CollectionViewSection.swift */,
+				883982D9266FAD6400E6B7BC /* GridCollectionViewLayout.swift */,
 				88C85AEE266CE0DC002C7EC3 /* AirTimePresenter.swift */,
 				88C85AEC266CE0D1002C7EC3 /* AirTimeInteractor.swift */,
 				88C85AF0266CE0F0002C7EC3 /* AirTimeRouter.swift */,
 				885FBC0126680A1A0040CE40 /* Entities */,
 				88C85AF6266CE37E002C7EC3 /* AirTimeModule.swift */,
+				883982D7266F9CEC00E6B7BC /* SectionHeaderReusableView.swift */,
 			);
 			path = ProgramsAirTimeModule;
 			sourceTree = "<group>";
@@ -274,8 +283,11 @@
 				88C85AEF266CE0DC002C7EC3 /* AirTimePresenter.swift in Sources */,
 				885FBC0A26680D060040CE40 /* ChannelsRepository.swift in Sources */,
 				885FBC0D26680F130040CE40 /* ApiConfig.swift in Sources */,
+				883982DA266FAD6400E6B7BC /* GridCollectionViewLayout.swift in Sources */,
 				88C85AF1266CE0F0002C7EC3 /* AirTimeRouter.swift in Sources */,
 				88414C50266BA89E00AE8DF4 /* ResponseError.swift in Sources */,
+				883982DC266FAD9F00E6B7BC /* CollectionViewSection.swift in Sources */,
+				883982D8266F9CEC00E6B7BC /* SectionHeaderReusableView.swift in Sources */,
 				885FBC0326680A3F0040CE40 /* Channel.swift in Sources */,
 				88C85AED266CE0D1002C7EC3 /* AirTimeInteractor.swift in Sources */,
 				88C85AF3266CE105002C7EC3 /* AirTimeViewController.swift in Sources */,

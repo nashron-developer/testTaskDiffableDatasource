@@ -16,7 +16,7 @@ protocol AirTimeView: AnyObject {
 protocol AirTimePresenter {
     var view: AirTimeView? { get }
     
-    func getAirTimeSections(completionHandler: @escaping ([Section]) -> Void)
+    func getAirTimeSections(completionHandler: @escaping ([AirTimeViewController.Section]) -> Void)
 }
 
 final class AirTimePresenterImpl: AirTimePresenter {
@@ -30,12 +30,12 @@ final class AirTimePresenterImpl: AirTimePresenter {
         self.router = router
     }
     
-    func getAirTimeSections(completionHandler: @escaping ([Section]) -> Void) {
+    func getAirTimeSections(completionHandler: @escaping ([AirTimeViewController.Section]) -> Void) {
         interactor.getRecentAirTime { [weak view] (result) in
             
             switch result {
             case .success(let resentAirTime):
-                let sections = resentAirTime.map { Section(channel: $0, programs: $1)}
+                let sections = resentAirTime.map { AirTimeViewController.Section(channel: $0, programs: $1)}
                 DispatchQueue.main.async {
                     completionHandler(sections)
                 }
