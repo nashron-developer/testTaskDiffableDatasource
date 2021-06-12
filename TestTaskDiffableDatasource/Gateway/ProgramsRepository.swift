@@ -33,7 +33,9 @@ final class ProgramsRepositoryImpl: ProgramsRepository {
                 return
             }
             do {
-                let programs = try JSONDecoder().decode([Program].self, from: data)
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                let programs = try decoder.decode([Program].self, from: data)
                 completionHandler(.success(programs))
             } catch let exception {
                 completionHandler(.failure(exception))

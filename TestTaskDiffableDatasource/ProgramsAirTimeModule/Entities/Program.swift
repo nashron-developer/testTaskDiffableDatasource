@@ -10,7 +10,7 @@ import Foundation
 struct Program: Hashable, Codable {
     let recentAirTime: RecentAirTime
     let name: String
-    let startTime: String
+    let startTime: Date
     let length: Int
     
 }
