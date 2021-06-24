@@ -25,5 +25,4 @@ class CollectionSection: Identifiable, Hashable {
         hasher.combine(id)
     }
     
-    
 }

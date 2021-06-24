@@ -42,18 +42,14 @@ final class AirTimePresenterImpl: AirTimePresenter {
                     .sorted { $0.channel.orderNum < $1.channel.orderNum }
                 let programs = channelSections
                     .flatMap { $0.programs }
-                let earlier = programs
-                    .min { $0.startTime < $1.startTime }!
-                let latest = programs
-                    .max { ($0.startTime + TimeInterval($0.length * 60)) < ($1.startTime + TimeInterval($1.length * 60)) }!
-                self?.earlierProgramTime = earlier.startTime
-                
                 var sections = [CollectionSection]()
-                
-                sections.append(
-                    TimeLineSection(startTime: earlier.startTime, endTime: latest.startTime + TimeInterval(latest.length * 60), step: 30 * 60)
-                )
-                
+                if let earlier = programs.min(by: { $0.startTime < $1.startTime }),
+                   let latest = programs.max(by: { ($0.startTime + TimeInterval($0.length * 60)) < ($1.startTime + TimeInterval($1.length * 60)) }) {
+                    self?.earlierProgramTime = earlier.startTime
+                    sections.append(
+                        TimeLineSection(startTime: earlier.startTime, endTime: latest.startTime + TimeInterval(latest.length * 60), step: 30 * 60)
+                    )
+                }
                 sections.append(contentsOf: channelSections)
                 DispatchQueue.main.async {
                     completionHandler(sections)

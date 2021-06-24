@@ -12,7 +12,6 @@ final class TimeLineSection: CollectionSection {
     
     private(set) var times = [CollectionItem]()
     
-    
     init(startTime: Date, endTime: Date, step: TimeInterval) {
         super.init(id: UUID().uuidString, title: "")
         let timeFormatter = DateFormatter()

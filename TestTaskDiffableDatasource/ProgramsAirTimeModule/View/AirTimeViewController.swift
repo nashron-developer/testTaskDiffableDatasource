@@ -10,7 +10,7 @@ import UIKit
 typealias AirTimeDataSource = UICollectionViewDiffableDataSource<CollectionSection, AnyHashable>
 typealias AirTimeSnapshot = NSDiffableDataSourceSnapshot<CollectionSection, AnyHashable>
 
-final class AirTimeViewController: UICollectionViewController, AirTimeView {
+final class AirTimeViewController: UICollectionViewController {
     final var presenter: AirTimePresenter
     
     init(presenter: AirTimePresenter) {
@@ -95,7 +95,7 @@ final class AirTimeViewController: UICollectionViewController, AirTimeView {
         print("did select program: #\(program.recentAirTime.id) \(program.name) on channel: \(program.recentAirTime.channelID)")
     }
     
-    func applySnapshot(with sections: [CollectionSection], animatingDifferences: Bool = true) {
+    private func applySnapshot(with sections: [CollectionSection], animatingDifferences: Bool = true) {
         var snapshot = AirTimeSnapshot()
         snapshot.appendSections(sections)
         sections.forEach { section in
@@ -109,6 +109,9 @@ final class AirTimeViewController: UICollectionViewController, AirTimeView {
         }
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
+}
+
+extension AirTimeViewController : AirTimeView {
     
     func showAlert(with title: String, _ message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -120,7 +123,7 @@ final class AirTimeViewController: UICollectionViewController, AirTimeView {
 
 extension UICollectionViewCell {
     
-    final func addLabel(with text: String?) {
+    func addLabel(with text: String?) {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0

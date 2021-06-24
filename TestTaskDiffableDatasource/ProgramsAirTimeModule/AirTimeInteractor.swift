@@ -55,16 +55,14 @@ final class AirTimeInteractorImpl: AirTimeInteractor {
             }
         }
         group.notify(queue: .global(qos: .userInitiated)) { [unowned self] in
-            if self.resentAirTime == nil {
-                self.resentAirTime = [Channel:[Program]]()
-            }
+            var resentAirTime = [Channel:[Program]]()
             channels.forEach { channel in
                 let programsByChannel = programs.filter { $0.recentAirTime.channelID == channel.id }
-                #warning("need add sorting by program start time")
                 programs.removeAll(where: { programsByChannel.contains($0) })
-                self.resentAirTime![channel] = programsByChannel
+                resentAirTime[channel] = programsByChannel
             }
-            completionHandler(.success(self.resentAirTime!))
+            self.resentAirTime = resentAirTime
+            completionHandler(.success(resentAirTime))
         }
     }
 
