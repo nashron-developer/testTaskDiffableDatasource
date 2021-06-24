@@ -11,6 +11,7 @@ protocol AirTimeView: AnyObject {
     var presenter: AirTimePresenter { get }
     
     func showAlert(with title: String, _ message: String?)
+    func showAlert(with title: String, _ message: String?, actions: [UIAlertAction])
 }
 
 protocol AirTimePresenter {

@@ -114,11 +114,19 @@ final class AirTimeViewController: UICollectionViewController {
 extension AirTimeViewController : AirTimeView {
     
     func showAlert(with title: String, _ message: String?) {
+        showAlert(with: title, message, actions: [.close])
+    }
+    
+    func showAlert(with title: String, _ message: String?, actions: [UIAlertAction]) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(.init(title: "Close", style: .cancel))
+        actions.forEach { alert.addAction($0) }
         present(alert, animated: true, completion: nil)
     }
     
+}
+
+extension UIAlertAction {
+    static let close: UIAlertAction = .init(title: "Close", style: .cancel)
 }
 
 extension UICollectionViewCell {
