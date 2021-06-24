@@ -15,7 +15,7 @@ final class ChannelSection: CollectionSection {
     init(channel: Channel, programs: [Program]) {
         self.channel = channel
         self.programs = programs
-        super.init(id: String(channel.id), title: channel.CallSign)
+        super.init(id: String(channel.id), title: channel.callSign)
     }
     
     static func == (lhs: ChannelSection, rhs: ChannelSection) -> Bool {
